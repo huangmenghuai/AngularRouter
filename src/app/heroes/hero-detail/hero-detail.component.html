@@ -1,0 +1,15 @@
+<p>
+  2hero-detail works!
+</p>
+<div *ngIf="hero$ | async as hero">
+  <h2>{{hero.name}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:</label>
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+
+  </div>
+  <p>
+    <button (click)="gotoHeroes(hero)">Back</button>
+  </p>
+</div>
